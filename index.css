@@ -1,0 +1,24 @@
+.header {
+    width: 100%;       /* Ocupa todo el ancho de la pantalla */
+    height: 100%;      /* Altura fija del header */
+    padding: 0 20px;   /* Espacio interno a los lados */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: url(./img/CineMasterBannerInicio.png);
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;
+}
+
+.contenidoHeader {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    color: rgb(246, 228, 228);
+    display: flex;
+    gap: 20px;
+}
+
+
+.estrenos {
+    display: flex;
+    gap: 20px;
+}
