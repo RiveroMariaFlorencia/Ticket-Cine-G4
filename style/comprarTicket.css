@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background-image: url("../img/fondoGlitter.gif");
+    background-color: black;
+    background-repeat: repeat;
+
+    font-family: Georgia, "Times New Roman", serif;
+    color: white;
+}
+
+header {
+    height: 50px;
+    background-color: #CBAC59;
+    color: black;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 20px;
+    font-size: 22px;
+}
+
+main {
+    width: 100%;
+    padding: 15px 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #CBAC59;
+    font-size: 34px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.contenedor-compra {
+    width: 900px;
+    max-width: 90%;
+
+    margin: 0 auto;
+    padding: 25px 40px;
+
+    background-color: #2B2B2B;
+    border: 2px solid #CBAC59;
+    border-radius: 12px;
+}
+
+.contenedor-compra h2 {
+    color: #CBAC59;
+    font-size: 28px;
+    font-weight: normal;
+    margin-top: 0;
+}
+
+.contenedor-compra p {
+    font-size: 20px;
+}
+
+.opcion-compra {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    margin-top: 20px;
+}
+
+.opcion-compra label {
+    font-size: 20px;
+}
+
+.opcion-compra select {
+    width: 180px;
+    height: 45px;
+
+    background-color: #CBAC59;
+    border: none;
+    border-radius: 8px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.total {
+    color: #CBAC59;
+    font-size: 26px !important;
+    margin-top: 25px;
+}
+
+.boton-confirmar {
+    width: 300px;
+    height: 60px;
+
+    margin: 25px auto 0;
+
+    background-color: #CBAC59;
+    color: black;
+
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    font-size: 20px;
+}
+
+footer {
+    background-color: #CBAC59;
+    color: black;
+
+    text-align: center;
+    font-size: 24px;
+
+    padding: 10px 0;
+}

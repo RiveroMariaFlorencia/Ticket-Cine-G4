@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pago</title>
+
+    <link rel="stylesheet" href="style/pago.css">
+</head>
+
+<body>
+
+    <header>
+        <p>logo</p>
+        <p>Bienvenido @usuario!</p>
+    </header>
+
+    <main>
+
+        <h1>DATOS DE COMPRA</h1>
+
+        <section class="contenedor-pago">
+
+            <h2>DATOS DEL CLIENTE</h2>
+
+            <div class="campo">
+                <label for="nombre">Nombre y Apellido:</label>
+                <input type="text" id="nombre">
+            </div>
+
+            <div class="campo">
+                <label for="email">Email:</label>
+                <input type="email" id="email">
+            </div>
+
+            <h2>DATOS DE PAGO</h2>
+
+            <div class="campo">
+                <label for="tarjeta">Número de Tarjeta:</label>
+                <input type="text" id="tarjeta">
+            </div>
+
+            <div class="campo">
+                <label for="titular">Titular:</label>
+                <input type="text" id="titular">
+            </div>
+
+            <div class="fila-pago">
+
+                <div class="campo-pequeno">
+                    <label for="vencimiento">Vencimiento:</label>
+                    <input type="text" id="vencimiento" placeholder="MM/AA">
+                </div>
+
+                <div class="campo-pequeno">
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" placeholder="123">
+                </div>
+
+            </div>
+
+            <p class="total">TOTAL A PAGAR: $12.000</p>
+
+            <button class="boton-pago" onclick="alert('¡Compra realizada con éxito!')">
+                REALIZAR PAGO
+            </button>
+
+        </section>
+
+    </main>
+
+    <footer>
+        @Grupo4
+    </footer>
+
+</body>
+
+</html>
