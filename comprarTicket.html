@@ -1,15 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Comprar Ticket</title>
+
+    <link rel="stylesheet" href="style/comprarTicket.css">
 </head>
+
 <body>
-    <nav>
-        <p>Logo</p>
-        <p>Bienvenido @usuario</p>
-    </nav>
-    <footer>@Grupo4</footer>
+
+    <header>
+        <p>logo</p>
+        <p>Bienvenido @usuario!</p>
+    </header>
+
+    <main>
+
+        <h1>COMPRAR TICKET</h1>
+
+        <section class="contenedor-compra">
+
+            <h2>OPPENHEIMER</h2>
+
+            <p>Fecha: Hoy</p>
+            <p>Horario: 16:30</p>
+
+            <div class="opcion-compra">
+                <label for="cantidad">Cantidad de entradas:</label>
+
+                <select id="cantidad">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+
+            <div class="opcion-compra">
+                <label for="tipoEntrada">Tipo de entrada:</label>
+
+                <select id="tipoEntrada">
+                    <option value="general">General</option>
+                    <option value="menor">Menor</option>
+                    <option value="jubilado">Jubilado</option>
+                </select>
+            </div>
+
+            <p class="total">TOTAL: $12.000</p>
+
+            <a href="pago.html" class="boton-confirmar">
+                CONFIRMAR COMPRA
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer>
+        @Grupo4
+    </footer>
+
 </body>
+
 </html>
