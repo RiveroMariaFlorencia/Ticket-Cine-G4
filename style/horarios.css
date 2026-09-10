@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background-image: url("../img/fondoGlitter.gif");
+    background-color: black;
+    background-repeat: repeat;
+
+    font-family: Georgia, "Times New Roman", serif;
+    color: white;
+}
+main {
+    width: 100%;
+    min-height: calc(100vh - 100px);
+    padding: 34px 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #CBAC59;
+    font-size: 40px;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.contenedor-horarios {
+    width: 1000px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.tarjeta-pelicula {
+    background-color: #2B2B2B;
+    border: 2px solid #CBAC59;
+    border-radius: 12px;
+
+    padding: 30px 40px;
+    margin-bottom: 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-pelicula {
+    width: 30%;
+}
+
+.info-pelicula h2 {
+    color: #CBAC59;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0 0 10px 0;
+}
+
+.info-pelicula p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.horarios-pelicula {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dia {
+    text-align: center;
+}
+
+.dia p {
+    color: #CBAC59;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.dia button {
+    width: 120px;
+    height: 45px;
+
+    background-color: #CBAC59;
+    border: none;
+    border-radius: 12px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+footer {
+    background-color: #CBAC59;
+    color: black;
+
+    text-align: center;
+    font-size: 24px;
+
+    padding: 10px 0;
+}
