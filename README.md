@@ -1,7 +1,7 @@
 # 🎟️ CineMaster 🎟️
 ## 📽️ Descripcion 
 - 🎬La pagina va a permitir realizar la compra de entradas.
-- 🎞️ Servira para organizar la venta de entradas de cine por pelicula, fecha, sucursales, sala, horario y asiento.
+- 🎞️ Servira para organizar la venta de entradas de cine por pelicula, fecha, horario, sala y asiento.
 - 🛋️ Dirigida a jovenes, adultos y familias que desean adquirir sus tickets con anticipacion, consultar horarios de funciones y cartelera disponible.
 
 ---
