@@ -78,19 +78,7 @@ h1 {
     margin-bottom: 10px;
 }
 
-.dia button {
-    width: 120px;
-    height: 45px;
 
-    background-color: #CBAC59;
-    border: none;
-    border-radius: 12px;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 16px;
-
-    cursor: pointer;
-}
 
 footer {
     background-color: #CBAC59;
@@ -100,4 +88,25 @@ footer {
     font-size: 24px;
 
     padding: 10px 0;
+}
+
+.boton-horario {
+    width: 120px;
+    height: 45px;
+
+    background-color: #CBAC59;
+    color: black;
+
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+
+    cursor: pointer;
 }
