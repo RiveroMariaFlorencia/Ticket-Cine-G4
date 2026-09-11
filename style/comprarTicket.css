@@ -71,6 +71,42 @@ h1 {
     margin-top: 20px;
 }
 
+.contenedor-compra h3 {
+    color: #CBAC59;
+    font-size: 22px;
+    font-weight: normal;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.tipo-entrada {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.tipo-entrada label {
+    width: 190px;
+    font-size: 18px;
+}
+
+.tipo-entrada select {
+    width: 120px;
+    height: 45px;
+
+    background-color: #CBAC59;
+    border: none;
+    border-radius: 8px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+
+
 .opcion-compra label {
     font-size: 20px;
 }
