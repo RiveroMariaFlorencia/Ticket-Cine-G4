@@ -1,22 +1,27 @@
+body{
+    background-image: url(../img/fondoGlitter.gif);
+    margin: 0;
+}
+
+
 .header {
     width: 100%;       /* Ocupa todo el ancho de la pantalla */
-    height: 100%;      /* Altura fija del header */
-    padding: 0 20px;   /* Espacio interno a los lados */
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-image: url(./img/CineMasterBannerInicio.png);
+    height: 580px;      /* Altura fija del header */
+    padding: cover;   /* Espacio interno a los lados */
+    top: 0px;
+    background-image: url(../img/CineMasterBannerInicio.png);
     background-repeat: no-repeat;
-    background-size:contain;
+    background-size:cover;
     background-position: center;
 }
 
-.contenidoHeader {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.txtPortada {
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    justify-content: center;
+    align-items: center;
+    color:white;
     text-align: center;
-    color: rgb(246, 228, 228);
-    display: flex;
-    gap: 20px;
 }
-
 
 .estrenos {
     display: flex;
@@ -26,4 +31,8 @@
 .peliculas{
     display: flex;
     gap: 20px;
+}
+
+main {
+    
 }
