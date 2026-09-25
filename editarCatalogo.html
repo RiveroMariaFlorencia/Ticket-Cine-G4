@@ -13,35 +13,47 @@
     </nav>
     <div class="editar">
         <div>
-            <h2>Seleccione que operacion desea realizar sobre el catalogo:</h2>
+            <h2>Seleccione que operación desea realizar sobre el catálogo:</h2>
         </div>
         <div class="formulario">
-            <h4>Agregar pelicula</h4>
-            <label for="titulo">Titulo Original: </label>
-            <input type="text" id="titulo" name="titulo"><br>
-            <label for="origen">Origen: </label>
-            <input type="text" id="origen" name="origen"><br>        
-            <label for="genero">Genero: </label>
-            <input type="text" id="genero" name="genero"><br>        
-            <label for="director">Director: </label>
-            <input type="text" id="director" name="director"><br>
-            <label for="actores">Actores: </label>
-            <input type="text" id="actores" name="atores"><br>
-            <label for="calificacion">Calificacion: </label>
-            <input type="text" id="calificacion" name="calificacion"><br>
-            <label for="duracion">Duracion: </label>
-            <input type="number" id="duracion" name="duracion"><br>
-            <label for="distribuidora">Distribuidora: </label>
-            <input type="text" id="distribuidora" name="distribuidora"><br>
-            <label for="portada">Portada: </label>
-            <input type="file" id="portada" name="portada" accept="image/*"><br>
-            <label for="trailer">Trailer: </label>
-            <input type="file" id="trailer" name="trailer" accept="video/*"><br>
+            <div class="contenedor">
+                <details>
+                    <summary>Agregar pelicula</summary>
+                    <div class="contenido">
+                        <label for="titulo">Titulo Original: </label>
+                        <input type="text" id="titulo" name="titulo"><br>
+                        <label for="origen">Origen: </label>
+                        <input type="text" id="origen" name="origen"><br>        
+                        <label for="genero">Género: </label>
+                        <input type="text" id="genero" name="genero"><br>        
+                        <label for="director">Director: </label>
+                        <input type="text" id="director" name="director"><br>
+                        <label for="actores">Actores: </label>
+                        <input type="text" id="actores" name="atores"><br>
+                        <label for="calificacion">Calificación: </label>
+                        <input type="text" id="calificacion" name="calificacion"><br>
+                        <label for="duracion">Duración: </label>
+                        <input type="number" id="duracion" name="duracion"><br>
+                        <label for="distribuidora">Distribuidora: </label>
+                        <input type="text" id="distribuidora" name="distribuidora"><br>
+                        <label for="portada">Portada: </label>
+                        <input type="file" id="portada" name="portada" accept="image/*"><br>
+                        <label for="trailer">Tráiler: </label>
+                        <input type="file" id="trailer" name="trailer" accept="video/*"><br>
+                    </div>
+                </details>
+            </div>
         </div>
         <div class="eliminarPeli">
-            <h4>Eliminar pelicula</h4>
-            <label for="eliminar">Ingrese el titulo orginal de la pelicula que desea eliminar:</label>
-            <input type="text" id="eliminar" name="eliminar"><br><br>
+            <div class="contenedor">
+                <details>
+                    <summary>Eliminar pelicula</summary>
+                        <div class="contenido">
+                            <label for="eliminar">Ingrese el titulo orginal de la pelicula que desea eliminar:</label>
+                            <input type="text" id="eliminar" name="eliminar"><br><br>
+                        </div>       
+                </details>
+            </div>
         </div>
         <button class="confirmar">Confirmar</button>
     </div>
