@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+body{
+    background-image: url(../img/fondoGlitter.gif);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    width: 450px;         /* Ancho idéntico para ambas */
+    height: 250px;        /* Alto idéntico para ambas */
+    object-fit: cover;    /* Recorta los bordes para que no se estiren */
+    object-position: center;
+}
+
+.sesion {
+    display: flex;
+    background-color: #121212;
+    border: 2px solid #8c7325;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 20px;
+    align-items: center;
+    color: aliceblue;
+    gap: 20px;
+
+}
+
+footer {
+    width: 100%;
+    background:#CBAC59;
+    color: #000000;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+  }

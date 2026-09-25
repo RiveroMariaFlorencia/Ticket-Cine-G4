@@ -4,32 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Cuenta</title>
+    <link rel="stylesheet" href="./style/miCuenta.css">
 </head>
 <body>
-    <div class="logo">Aca va el logo</div>
-    <div class="login">
-        <p>Iniciar Sesion</p>
-        <form>
-            <label for="email">Email</label>
-            <input type="email" id="emailIniciarSesion" name="email" placeholder="email@gmail.com" required> <br>
-            <label for="password">Contraseña</label>
-            <input type="password" id="passwordIniciarSesion" name="password" placeholder="Ingrese su contraseña" required><br>
-        </form>
-        <button><a href="./editarCatalogo.html">Iniciar Sesion</a></button>
-    </div>
-    <div class="registrarse">
-        <p>Registrarse</p>
-        <form>
-            <label for="email">Email</label>
-            <input type="email" id="emailRegistrarse" name="email" placeholder="email@gmail.com" required><br>
-            <label for="dni">DNI</label>
-            <input type="number" id="dniRegistrarse" name="dni" placeholder="Ingrese su dni" required><br>
-            <label for="password">Contraseña</label>
-            <input type="password" id="passwordRegistrarse" name="password" placeholder="Ingrese su contraseña" required><br>
-            <label for="password">Escriba su contraseña nuevamente</label>
-            <input type="password" id="passwordRegistrarseConfirmacion" name="password" placeholder="Confirme su contraseña" required><br>
-        </form>
-        <button><a href="./comprarTicket.html">Registrarse</a></button>
+    <div class="sesion">
+        <div class="logo">
+            <img src="./img/logo.png" alt="logo" class="logo">
+        </div>
+        <div class="datos">
+            <div class="login">
+                <h4>Iniciar Sesion</h4>
+                <form>
+                    <label for="email">Email</label>
+                    <input type="email" id="emailIniciarSesion" name="email" placeholder="email@gmail.com" required> <br>
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="passwordIniciarSesion" name="password" placeholder="Ingrese su contraseña" required><br>
+                </form>
+                <button><a href="./editarCatalogo.html">Iniciar Sesion</a></button>
+            </div>
+            <div class="registrarse">
+                <h4>Registrarse</h4>
+                <form>
+                    <label for="email">Email</label>
+                    <input type="email" id="emailRegistrarse" name="email" placeholder="email@gmail.com" required><br>
+                    <label for="dni">DNI</label>
+                    <input type="number" id="dniRegistrarse" name="dni" placeholder="Ingrese su dni" required><br>
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="passwordRegistrarse" name="password" placeholder="Ingrese su contraseña" required><br>
+                    <label for="password">Escriba su contraseña nuevamente</label>
+                    <input type="password" id="passwordRegistrarseConfirmacion" name="password" placeholder="Confirme su contraseña" required><br>
+                </form>
+                <button><a href="./comprarTicket.html">Registrarse</a></button>
+            </div>
+        </div>
     </div>
     <footer>@Grupo4</footer>
 </body>
