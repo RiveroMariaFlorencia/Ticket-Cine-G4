@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CineMaster</title>
-     <link rel="stylesheet" href="./style/index.css">
+    <link rel="icon" href="./img/logo.png">
+    <link rel="stylesheet" href="./style/index.css">
 </head>
 <body>
     <header class="header">
@@ -15,28 +16,78 @@
             <h1>CINEMASTER</h1>
         </div>
         <div class="comprar">
-            <a href="./comprarTicket.html">COMPRA TUS ENTRADAS ONLINE</a>
+            <a href="./comprarTicket.html" class="comprarRef">COMPRA TUS ENTRADAS ONLINE</a>
         </div>  
+
+        <div class="indicador-scroll">
+            <div class="flecha"></div>
+        </div>
     </header>
     <main>
         <nav>
             <p>CINEMASTER</p>
             <a href="./miCuenta.html">Mi Cuenta</a>
         </nav>
-        <marquee>¡Estamos de estreno! Celebramos la gran apertura con entradas a mitad de precio!!</marquee>
+        <marquee scrollamount="15">¡ESTAMOS DE ESTRENO! Celebramos la gran apertura con entradas a mitad de precio</marquee>
         <div class="inicio">
             <div class="cartelera">
                 <h3><u>ESTRENOS</u></h3>
-                <div class="estrenos">    
-                    <img src="./img/portadaPeliculas/spiderman.png" alt="spiderman" class="portadaPeli">
-                    <img src="./img/portadaPeliculas/zonacero.png" alt="zonacero" class="portadaPeli">
+                <div class="estrenos"> 
+                    <div class="contenedor">   
+                        <img src="./img/portadaPeliculas/spiderman.png" alt="spiderman" class="portadaPeli">
+                        <div class="descripcion">
+                            <h4>Spider-Man: Brand New Day</h4>
+                            <h5>2026 ‧ Acción/Aventura ‧ 2h 25m</h5><br>
+                            <p>A medida que las exigencias a las que se ve sometido Spider-Man se intensifican, la presión desencadena una sorprendente evolución física que pone en peligro su existencia. Al mismo tiempo, una nueva y extraña ola de delitos da lugar a una de las amenazas más poderosas a las que se ha enfrentado jamás. </p>
+                        </div>
+                    </div>
+                    <div class="contenedor">
+                        <img src="./img/portadaPeliculas/zonacero.png" alt="zonacero" class="portadaPeli">
+                        <div class="descripcion">
+                            <h4>Colony</h4>
+                            <h5>2026 ‧ Terror ‧ 2h 2m</h5><br>
+                            <p>La profesora Se Jeong asiste a una conferencia de biotecnología que se convierte en caos cuando se libera un virus de rápida mutación. Mientras el brote crece y las víctimas se transforman, las autoridades sellan el edificio.</p>
+                        </div>
+                    </div>
+                    <div class="contenedor">
+                        <img src="./img/portadaPeliculas/residentEvil.jpg" alt="residentEvil" class="portadaPeli">
+                        <div class="descripcion">
+                            <h4>Resident Evil</h4>
+                            <h5>2026 ‧ Terror/Ciencia ficción ‧ 1h 37m</h5><br>
+                            <p>Un desdichado mensajero tiene la tarea de entregar un paquete a un hospital remoto. Pronto se encuentra atrapado en medio de un brote y debe luchar a través de hordas de criaturas mutadas para sobrevivir.</p>
+                        </div>
+                    </div>
                 </div>
                 <h3><u>PELICULAS</u></h3>
                 <div class="peliculas">
-                    <img src="./img/portadaPeliculas/oppenheimer.png" alt="oppenheimer" class="portadaPeli">
-                    <img src="./img/portadaPeliculas/barbie.png" alt="barbie" class="portadaPeli">
-                    <img src="./img/portadaPeliculas/coraline.png" alt="coraline" class="portadaPeli">
+                    <div class="contenedor">
+                        <img src="./img/portadaPeliculas/oppenheimer.png" alt="oppenheimer" class="portadaPeli">
+                        <div class="descripcion">
+                            <h4>Oppenheimer</h4>
+                            <h5>2023 ‧ Suspenso ‧ 3 horas</h5><br>
+                            <p>Durante la Segunda Guerra Mundial, el teniente general Leslie Groves designa al físico J. Robert Oppenheimer para un grupo de trabajo que está desarrollando el Proyecto Manhattan, cuyo objetivo consiste en fabricar la primera bomba atómica.</p>
+                        </div>
+                    </div>
+                    <div class="contenedor">
+                        <img src="./img/portadaPeliculas/barbie.png" alt="barbie" class="portadaPeli">
+                        <div class="descripcion">
+                            <h4>Barbie</h4>
+                            <h5>2023 ‧ Comedia/Fantasía ‧ 1h 54m</h5><br>
+                            <p>Después de ser expulsada de Barbieland por no ser una muñeca de aspecto perfecto, Barbie parte hacia el mundo humano para encontrar la verdadera felicidad.</p>
+                        </div>
+                    </div>
+                    <div class="contenedor">
+                        <img src="./img/portadaPeliculas/coraline.png" alt="coraline" class="portadaPeli">
+                        <div class="descripcion">
+                            <h4>Coraline y la puerta secreta</h4>
+                            <h5>2009 ‧ Infantil/Terror ‧ 1h 55m</h5><br>
+                            <p>Coraline es una joven aburrida que descubre que la pared tapiada tras una puerta de su piso conduce a otro mundo, con otra madre y otro padre. Todo comienza cuando la joven atraviesa una puerta secreta de su nuevo hogar y descubre una versión alternativa de su vida. A primera vista, esta realidad paralela es muy parecida a su vida real, pero mucho mejor. Pero cuando esta fantástica aventura se vuelve peligrosa y sus falsos padres intentan retenerla para siempre, Coraline debe confiar en su ingenio, determinación y valentía para volver a casa y salvar a su familia.</p>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <div class="horario">
+                <button class="confirmar"><a href="./horarios.html">Consulta los horarios aca</a></button>
             </div>
         </div>
     </main>

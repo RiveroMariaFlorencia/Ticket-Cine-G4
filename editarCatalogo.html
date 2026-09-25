@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Catalogo</title>
+    <link rel="icon" href="./img/logo.png">
     <link rel="stylesheet" href="./style/editarCatalogo.css">
 </head>
 <body>
     <nav>
-        <p>CINEMASTER</p>
+        <a href="./index.html">CINEMASTER</a>
         <p>Bienvenido @usuario</p>
     </nav>
     <div class="editar">
@@ -21,25 +22,25 @@
                     <summary>Agregar pelicula</summary>
                     <div class="contenido">
                         <label for="titulo">Titulo Original: </label>
-                        <input type="text" id="titulo" name="titulo"><br>
+                        <input type="text" id="titulo" name="titulo" placeholder="Ingrese titulo de la pelicula"><br>
                         <label for="origen">Origen: </label>
-                        <input type="text" id="origen" name="origen"><br>        
+                        <input type="text" id="origen" name="origen" placeholder="Ingrese origen de la pelicula"><br>        
                         <label for="genero">Género: </label>
-                        <input type="text" id="genero" name="genero"><br>        
+                        <input type="text" id="genero" name="genero" placeholder="Ingrese el género de la pelicula"><br>        
                         <label for="director">Director: </label>
-                        <input type="text" id="director" name="director"><br>
+                        <input type="text" id="director" name="director" placeholder="Ingrese el nombre completo del director de la pelicula"><br>
                         <label for="actores">Actores: </label>
-                        <input type="text" id="actores" name="atores"><br>
+                        <input type="text" id="actores" name="atores" placeholder="Ingrese el nombre completo de los actores principales de la pelicula"><br>
                         <label for="calificacion">Calificación: </label>
-                        <input type="text" id="calificacion" name="calificacion"><br>
+                        <input type="text" id="calificacion" name="calificacion" placeholder="Ingrese la calificación de la pelicula"><br>
                         <label for="duracion">Duración: </label>
-                        <input type="number" id="duracion" name="duracion"><br>
+                        <input type="number" id="duracion" name="duracion" placeholder="Ingrese la duración de la pelicula"><br>
                         <label for="distribuidora">Distribuidora: </label>
-                        <input type="text" id="distribuidora" name="distribuidora"><br>
+                        <input type="text" id="distribuidora" name="distribuidora" placeholder="Ingrese la distribuidora de la pelicula"><br>
                         <label for="portada">Portada: </label>
                         <input type="file" id="portada" name="portada" accept="image/*"><br>
                         <label for="trailer">Tráiler: </label>
-                        <input type="file" id="trailer" name="trailer" accept="video/*"><br>
+                        <input type="url" id="trailer" name="trailer" placeholder="Ingrese la url del trailer desde YouTube"><br>
                     </div>
                 </details>
             </div>

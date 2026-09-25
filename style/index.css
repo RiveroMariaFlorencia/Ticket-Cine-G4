@@ -4,7 +4,6 @@
   }
 
 body{
-    background-image: url(../img/fondoGlitter.gif);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,6 +24,11 @@ body{
     gap: 205px; /*separacion entre elementos*/
     color: #ffffff;
     font-size:xx-large;
+    font-family:'Times New Roman', Times, serif;
+
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .eslogan {
@@ -39,8 +43,16 @@ body{
     color: #ffffff;
 }
 
+
+
+
 main {
     width: 100%;
+
+    background-image: url(../img/fondoGlitter.gif);
+
+    position: relative;
+    z-index: 2;
 }
 
 nav {
@@ -85,6 +97,7 @@ h3 {
     color: #8c7325;
 }
 
+
 .estrenos, .peliculas {
     display: flex;
     gap: 30px;
@@ -93,10 +106,72 @@ h3 {
 .portadaPeli {
     width: 200px;         /* Ancho idéntico para ambas */
     height: 285px;        /* Alto idéntico para ambas */
+
     object-fit: cover;    /* Recorta los bordes para que no se estiren */
     object-position: center;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;     /* Suaviza la animación tanto al entrar como al salir del cursor */
+    cursor: pointer;
 }
 
+.portadaPeli:hover {
+    transform: translateY(-20px);  /* Mueve la imagen 10 píxeles hacia arriba en el eje Y */
+    /* Añade una sombra difusa abajo para simular la altura */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
+}
+
+.contenedor {
+    position: relative;
+    display: inline-block; /* Hace que el contenedor se adapte justo al tamaño de la imagen */
+}
+
+.descripcion {
+    position: absolute;
+    top: 0;             /* Alinea la caja con la parte superior de la imagen */
+    left: 105%;         /* La empuja completamente hacia la derecha de la imagen (+5% de separación) */
+    width: 250px;       /* Ancho de la caja de texto */
+    padding: 15px;
+    background-color: #ffe189;
+    color: #333333;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Sombra para darle efecto flotante */
+    
+    /* Ocultar inicialmente */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-10px); /* Ligero efecto de movimiento al aparecer */
+    transition: all 0.3s ease;
+    z-index: 10;        /* Se asegura de quedar por encima de otros elementos */
+}
+  
+
+.contenedor:hover .descripcion {  /* Muestra la descripción al pasar el cursor por el contenedor */
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0); /* Vuelve a su posición original */
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.confirmar {
+    display: block;
+    background-color: #dfba6b;
+    color: #2b2313;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 35px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 25px auto 0 auto;
+    margin-bottom: 20px;
+}
+
+.confirmar:hover {
+    background-color: #cda85a;
+}
 
 footer {
     width: 100%;
@@ -105,4 +180,7 @@ footer {
     text-align: center;
     padding: 10px;
     font-weight: bold;
+
+    position: relative;
+    z-index: 2;
   }
