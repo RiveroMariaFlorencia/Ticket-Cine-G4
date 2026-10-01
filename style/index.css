@@ -96,13 +96,3 @@ h3 {
     object-fit: cover;    /* Recorta los bordes para que no se estiren */
     object-position: center;
 }
-
-
-footer {
-    width: 100%;
-    background:#CBAC59;
-    color: #000000;
-    text-align: center;
-    padding: 10px;
-    font-weight: bold;
-  }

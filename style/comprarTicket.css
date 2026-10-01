@@ -141,6 +141,7 @@ h1 {
     background-color: #CBAC59;
     color: black;
 
+    border: none;
     border-radius: 10px;
 
     display: flex;
@@ -148,15 +149,175 @@ h1 {
     align-items: center;
 
     text-decoration: none;
+
+    font-family: Georgia, "Times New Roman", serif;
     font-size: 20px;
+
+    cursor: pointer;
 }
 
-footer {
+
+/* STEPPER */
+
+.stepper {
+    width: 850px;
+    max-width: 90%;
+    margin: 20px auto 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.paso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: #808080;
+}
+
+.circulo {
+    width: 40px;
+    height: 40px;
+
+    border: 2px solid #808080;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 18px;
+}
+
+.paso p {
+    margin: 8px 0 0;
+    font-size: 16px;
+}
+
+.linea {
+    width: 90px;
+    height: 2px;
+
+    background-color: #808080;
+
+    margin-top: 20px;
+}
+
+/* PASO ACTUAL */
+
+.paso.activo {
+    color: #CBAC59;
+}
+
+.paso.activo .circulo {
+    border-color: #CBAC59;
     background-color: #CBAC59;
     color: black;
+}
 
+/* CONTENIDO DE CADA PASO */
+/*Oculta todos los pasos*/
+.contenido-paso {
+    display: none;
+}
+
+/*muestra el que tenga clse activo*/
+.contenido-paso.activo {
+    display: block;
+}
+
+/* PASOS COMPLETADOS */
+
+.paso.completado {
+    color: #CBAC59;
+}
+
+.paso.completado .circulo {
+    border-color: #CBAC59;
+    background-color: #CBAC59;
+    color: black;
+}
+
+.compra-exitosa {
     text-align: center;
-    font-size: 24px;
+    padding: 30px;
+}
 
+.compra-exitosa h2 {
+    color: #CBAC59;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.compra-exitosa p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.compra-exitosa .total {
+    font-size: 24px;
+    color: #CBAC59;
+    margin-top: 20px;
+}
+
+.boton-siguiente,
+.boton-anterior {
+    min-width: 140px;
+    height: 45px;
+
+    margin-top: 25px;
+    margin-right: 10px;
+    padding: 0 20px;
+
+    border: none;
+    border-radius: 8px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+.boton-siguiente {
+    background-color: #CBAC59;
+    color: black;
+}
+
+.boton-anterior {
+    background-color: #808080;
+    color: white;
+}
+
+.campo-pago {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+.campo-pago label {
+    width: 190px;
+    font-size: 18px;
+}
+
+.campo-pago input {
+    width: 400px;
+    height: 45px;
+
+    padding: 0 10px;
+
+    border: 1px solid #CBAC59;
+    border-radius: 6px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+}
+.resumen-compra {
     padding: 10px 0;
+}
+
+.resumen-compra p {
+    margin: 10px 0;
 }
