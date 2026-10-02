@@ -80,24 +80,16 @@ h1 {
 
 
 
-footer {
-    background-color: #CBAC59;
-    color: black;
-
-    text-align: center;
-    font-size: 24px;
-
-    padding: 10px 0;
-}
-
 .boton-horario {
-    width: 120px;
-    height: 45px;
+    min-width: 85px;
+    height: 40px;
+
+    padding: 0 12px;
 
     background-color: #CBAC59;
     color: black;
 
-    border-radius: 12px;
+    border-radius: 10px;
 
     display: flex;
     justify-content: center;
@@ -109,4 +101,10 @@ footer {
     font-size: 16px;
 
     cursor: pointer;
+}
+.lista-horarios {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
 }

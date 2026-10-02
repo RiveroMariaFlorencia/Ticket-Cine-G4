@@ -172,15 +172,3 @@ a {
 .confirmar:hover {
     background-color: #cda85a;
 }
-
-footer {
-    width: 100%;
-    background:#CBAC59;
-    color: #000000;
-    text-align: center;
-    padding: 10px;
-    font-weight: bold;
-
-    position: relative;
-    z-index: 2;
-  }

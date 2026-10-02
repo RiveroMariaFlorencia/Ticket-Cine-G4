@@ -8,6 +8,7 @@
     <title>Comprar Ticket</title>
     <link rel="icon" href="./img/logo.png">
     <link rel="stylesheet" href="style/comprarTicket.css">
+    <link rel="stylesheet" href="style/footer.css">
 </head>
 
 <body>
@@ -21,56 +22,111 @@
 
         <h1>COMPRAR TICKET</h1>
 
+        <div class="stepper">
+
+    <div class="paso activo">
+        <div class="circulo">1</div>
+        <p>Película</p>
+    </div>
+
+    <div class="linea"></div>
+
+    <div class="paso">
+        <div class="circulo">2</div>
+        <p>Horario</p>
+    </div>
+
+    <div class="linea"></div>
+
+    <div class="paso">
+        <div class="circulo">3</div>
+        <p>Entradas</p>
+    </div>
+
+    <div class="linea"></div>
+
+    <div class="paso">
+        <div class="circulo">4</div>
+        <p>Pago</p>
+    </div>
+
+    <div class="linea"></div>
+
+    <div class="paso">
+        <div class="circulo">5</div>
+        <p>Finalizar</p>
+    </div>
+
+</div>
+
         <section class="contenedor-compra">
+            <div class="contenido-paso activo" id="paso1">
 
-            <div class="opcion-compra">
-    <label for="pelicula">Película:</label>
+                <div class="opcion-compra">
+                    <label for="pelicula">Película:</label>
 
-    <select id="pelicula">
-        <option value="oppenheimer">Oppenheimer</option>
-        <option value="barbie">Barbie</option>
-        <option value="avatar">Avatar</option>
-    </select>
+                    <select id="pelicula">
+                        <option value="oppenheimer">Oppenheimer</option>
+                        <option value="barbie">Barbie</option>
+                        <option value="avatar">Avatar</option>
+                    </select>
+                </div>
+
+                <button type="button" class="boton-siguiente" onclick="mostrarPaso(2)">
+                    SIGUIENTE
+                </button>
+
+                </div>
+
+<div class="contenido-paso" id="paso2">
+
+    <div class="opcion-compra">
+        <label for="dia">Día:</label>
+
+        <select id="dia" onchange="actualizarHorarios()">
+            <option value="hoy">Hoy</option>
+            <option value="manana">Mañana</option>
+            <option value="viernes">Viernes</option>
+        </select>
+    </div>
+
+    <div class="opcion-compra">
+        <label for="horario">Horario:</label>
+
+        <select id="horario">
+        </select>
+    </div>
+
+    <button type="button" class="boton-anterior" onclick="mostrarPaso(1)">
+        ANTERIOR
+    </button>
+
+    <button type="button" class="boton-siguiente" onclick="mostrarPaso(3)">
+        SIGUIENTE
+    </button>
+
 </div>
 
-<div class="opcion-compra">
-    <label for="dia">Día:</label>
+<div class="contenido-paso" id="paso3">
 
-    <select id="dia">
-        <option value="hoy">Hoy</option>
-        <option value="manana">Mañana</option>
-        <option value="viernes">Viernes</option>
-    </select>
-</div>
+    <h3>ENTRADAS</h3>
 
-<div class="opcion-compra">
-    <label for="horario">Horario:</label>
+    <div class="tipo-entrada">
+        <label for="general">General:</label>
 
-    <select id="horario">
-        <option value="16:30">16:30</option>
-        <option value="19:00">19:00</option>
-        <option value="22:15">22:15</option>
-    </select>
-</div>
-
-            <h3>ENTRADAS</h3>
-
-<div class="tipo-entrada">
-    <label for="general">General:</label>
-
-    <select id="general">
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-    </select>
-</div>
+        <select id="general" onchange="calcularTotal()">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+    </div>
 
 <div class="tipo-entrada">
     <label for="menor">Menor:</label>
 
-    <select id="menor">
+    <select id="menor" onchange="calcularTotal()">
         <option value="0">0</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -82,7 +138,7 @@
 <div class="tipo-entrada">
     <label for="jubilado">Jubilado:</label>
 
-    <select id="jubilado">
+    <select id="jubilado" onchange="calcularTotal()">
         <option value="0">0</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -91,20 +147,129 @@
     </select>
 </div>
 
-            <p class="total">TOTAL: $12.000</p>
+<p class="total">
+    TOTAL: <span id="totalEntradas">$0</span>
+</p>
+            
+<button type="button" class="boton-anterior" onclick="mostrarPaso(2)">
+    ANTERIOR
+</button>
 
-            <a href="pago.html" class="boton-confirmar">
-                CONFIRMAR COMPRA
-            </a>
+<button type="button" class="boton-siguiente"
+        onclick="if (validarEntradas()) mostrarPaso(4)">
+    SIGUIENTE
+</button>
+
+</div>
+<div class="contenido-paso" id="paso4">
+
+    <h3>DATOS DEL CLIENTE</h3>
+
+    <div class="campo-pago">
+        <label for="nombre">Nombre y apellido:</label>
+        <input type="text" id="nombre">
+    </div>
+
+    <div class="campo-pago">
+        <label for="email">Email:</label>
+        <input type="email" id="email">
+    </div>
+
+    <h3>DATOS DE PAGO</h3>
+
+    <div class="campo-pago">
+        <label for="tarjeta">Número de tarjeta:</label>
+        <input type="text" id="tarjeta">
+    </div>
+
+    <div class="campo-pago">
+        <label for="titular">Titular:</label>
+        <input type="text" id="titular">
+    </div>
+
+    <div class="campo-pago">
+        <label for="vencimiento">Vencimiento:</label>
+        <input type="text" id="vencimiento" placeholder="MM/AA">
+    </div>
+
+    <div class="campo-pago">
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" placeholder="123">
+    </div>
+
+    <button type="button" class="boton-anterior" onclick="mostrarPaso(3)">
+        ANTERIOR
+    </button>
+
+    <button type="button" class="boton-siguiente"
+        onclick="if (validarPago()) mostrarPaso(5)">
+    REVISAR COMPRA
+    </button>
+
+</div>
+
+<div class="contenido-paso" id="paso5">
+
+    <h3>RESUMEN DE COMPRA</h3>
+
+    <div class="resumen-compra">
+
+        <p>Película: <span id="resumenPelicula"></span></p>
+
+        <p>Día: <span id="resumenDia"></span></p>
+
+        <p>Horario: <span id="resumenHorario"></span></p>
+
+        <h3>ENTRADAS</h3>
+
+        <p>General: <span id="resumenGeneral"></span></p>
+
+        <p>Menor: <span id="resumenMenor"></span></p>
+
+        <p>Jubilado: <span id="resumenJubilado"></span></p>
+
+        <p class="total">
+            TOTAL: <span id="resumenTotal">$0</span>
+</p>
+
+    </div>
+
+    <button type="button" class="boton-anterior" onclick="mostrarPaso(4)">
+        ANTERIOR
+    </button>
+
+    <button type="button" class="boton-confirmar" onclick="finalizarCompra()">
+    CONFIRMAR COMPRA
+    </button>
+
+</div>
+
+
 
         </section>
 
     </main>
 
-    <footer>
-        @Grupo4
+    <footer class="footer">
+
+    <div class="footer-contenido">
+
+        <div class="footer-marca">
+            <h3>CineMaster</h3>
+            <p>Tu próxima película comienza acá.</p>
+        </div>
+
+        <div class="footer-info">
+            <p>Proyecto desarrollado por Grupo 4</p>
+            <p>© 2026 CineMaster · Todos los derechos reservados</p>
+        </div>
+
+    </div>
+
     </footer>
 
-</body>
+    <script src="comprarTicket.js"></script>  
 
-</html>
+    </body>
+
+    </html>
