@@ -27,6 +27,11 @@ header {
     font-size: 22px;
 }
 
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
 main {
     width: 100%;
     padding: 15px 20px;
