@@ -43,6 +43,7 @@
                         <label for="trailer">Tráiler: </label>
                         <input type="url" id="trailer" name="trailer" placeholder="Ingrese la url del trailer desde YouTube"><br>
                     </div>
+                    <button class="confirmar" onclick="confirmacion()">Agregar</button>
                 </details>
             </div>
         </div>
@@ -51,13 +52,21 @@
                 <details>
                     <summary>Eliminar pelicula</summary>
                         <div class="contenido">
-                            <label for="eliminar">Ingrese el titulo orginal de la pelicula que desea eliminar:</label>
-                            <input type="text" id="eliminar" name="eliminar"><br><br>
+                            <p>Seleccione la película que desea eliminar:</p>
+                            <div id="listaPeliculas">
+                                <label class="opcion_pelicula"><input type="checkbox"> Barbie </label><br>
+                                <label class="opcion_pelicula"><input type="checkbox"> Colony</label><br>
+                                <label class="opcion_pelicula"><input type="checkbox"> Coraline y la puerta secreta</label><br>
+                                <label class="opcion_pelicula"><input type="checkbox"> Oppenheimer</label><br>
+                                <label class="opcion_pelicula"><input type="checkbox"> Resident Evil</label><br>
+                                <label class="opcion_pelicula"><input type="checkbox"> Spider-Man: Brand New Day</label><br>
+                            </div>
+                            <button class="confirmar" onclick="confirmacion()">Eliminar</button>
                         </div>       
                 </details>
             </div>
         </div>
-        <button class="confirmar" onclick="confirmacion()">Confirmar</button>
+
     </div>
     <footer>@Grupo4</footer>
 </body>
