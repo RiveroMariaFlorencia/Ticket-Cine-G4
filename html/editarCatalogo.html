@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Catalogo</title>
-    <link rel="icon" href="./img/logo.png">
-    <link rel="stylesheet" href="./style/editarCatalogo.css">
-    <script src="./script/editarCatalogo.js"></script>
+    <link rel="icon" href="../img/logo.png">
+    <link rel="stylesheet" href="../style/editarCatalogo.css">
+    <script src="../script/editarCatalogo.js"></script>
+    <link rel="stylesheet" href="../style/footer.css">
 </head>
 <body>
+    <!--el nav funciona de encabezado
+    y tiene un enlace de regreso a la pág principal-->
     <nav>
         <a href="./index.html">CINEMASTER</a>
         <p>Bienvenida!</p>
@@ -19,8 +22,8 @@
         </div>
         <div class="formulario">
             <div class="contenedor">
-                <details>
-                    <summary>Agregar pelicula</summary>
+                <details><!--crea un bloque q puede abrirse o cerrarse-->
+                    <summary>Agregar pelicula</summary> <!--titulo q hace clic el usuario-->
                     <div class="contenido">
                         <label for="titulo">Titulo Original: </label>
                         <input type="text" id="titulo" name="titulo" placeholder="Ingrese titulo de la pelicula"><br>
@@ -68,6 +71,22 @@
         </div>
 
     </div>
-    <footer>@Grupo4</footer>
+    <footer class="footer">
+
+    <div class="footer-contenido">
+
+        <div class="footer-marca">
+            <h3>CineMaster</h3>
+            <p>Tu próxima película comienza acá.</p>
+        </div>
+
+        <div class="footer-info">
+            <p>Proyecto desarrollado por Grupo 4</p>
+            <p>© 2026 CineMaster · Todos los derechos reservados</p>
+        </div>
+
+    </div>
+
+    </footer>
 </body>
 </html>
