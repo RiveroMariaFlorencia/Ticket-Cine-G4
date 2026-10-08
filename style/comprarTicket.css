@@ -1,10 +1,11 @@
-* {
+* { /*Configuración gral para el manejo de tamaños*/
     box-sizing: border-box;
 }
 
+/*Define el aspecto gral de la pág*/
 body {
     margin: 0;
-    min-height: 100vh;
+    min-height: 100vh; /*el body tenga como min el alto de la pantalla*/
 
     background-image: url("../img/fondoGlitter.gif");
     background-color: black;
@@ -14,29 +15,31 @@ body {
     color: white;
 }
 
+/*Diseño de la barra superior*/
 header {
     height: 50px;
     background-color: #CBAC59;
     color: black;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /*Acomoda elementos dentro de un contenedor*/
+    justify-content: space-between; /*Manda un elemeto hacia un ext y el otro hacia el otro ext*/
+    align-items: center; /*centra los elementos vertialmente*/
 
     padding: 0 20px;
     font-size: 22px;
 }
-
+ /*Diseño de los enlaces*/
 a {
-    text-decoration: none;
+    text-decoration: none; /*elimina el subrayado*/
     color: #ffffff;
 }
 
+/*Define el espacio del contenido principal*/
 main {
     width: 100%;
     padding: 15px 20px;
 }
-
+/*Diseña COMPRAR TICKET*/
 h1 {
     text-align: center;
     color: #CBAC59;
@@ -45,6 +48,7 @@ h1 {
     margin-bottom: 15px;
 }
 
+/*diseño de la caja principal donde se muestra cada etapa del proceso de compra*/
 .contenedor-compra {
     width: 900px;
     max-width: 90%;
@@ -57,6 +61,7 @@ h1 {
     border-radius: 12px;
 }
 
+/*aplican diseño solamente a estos elementos cuando están dentro del contenedor de compra*/
 .contenedor-compra h2 {
     color: #CBAC59;
     font-size: 28px;
@@ -68,10 +73,11 @@ h1 {
     font-size: 20px;
 }
 
+/*organiza horizontalmente el label y el select de película, día y horario*/
 .opcion-compra {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 20px; /*separación entre elementos*/
 
     margin-top: 20px;
 }
@@ -84,17 +90,18 @@ h1 {
     margin-bottom: 15px;
 }
 
+/*diseño del selector de entradas*/
 .tipo-entrada {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
 }
-
+/*le da el mismo ancho a todas las etiquetas(label)*/
 .tipo-entrada label {
     width: 190px;
     font-size: 18px;
 }
-
+/*Da formato al desplegable de tipo de entrada*/
 .tipo-entrada select {
     width: 120px;
     height: 45px;
@@ -111,11 +118,11 @@ h1 {
 }
 
 
-
+/*mismo ancho a todas las etiquetas*/
 .opcion-compra label {
     font-size: 20px;
 }
-
+/*Da formato al desplegable de opcio compra*/
 .opcion-compra select {
     width: 180px;
     height: 45px;
@@ -131,12 +138,14 @@ h1 {
     cursor: pointer;
 }
 
+/*resalta visualmente el precio*/
 .total {
     color: #CBAC59;
-    font-size: 26px !important;
+    font-size: 26px !important; /*obliga que el tamaño del total sea 26px*/
     margin-top: 25px;
 }
 
+/*diseña el boton de confirmar compra*/
 .boton-confirmar {
     width: 300px;
     height: 60px;
@@ -164,6 +173,7 @@ h1 {
 
 /* STEPPER */
 
+/*orgaiza todos los pasos horizontalmente, utiliza flexbox para distribuirlos*/
 .stepper {
     width: 850px;
     max-width: 90%;
@@ -174,6 +184,7 @@ h1 {
     align-items: flex-start;
 }
 
+/*Da diseño a cada paso individual*/
 .paso {
     display: flex;
     flex-direction: column;
@@ -182,6 +193,7 @@ h1 {
     color: #808080;
 }
 
+/*diseño de los circulos del stepper*/
 .circulo {
     width: 40px;
     height: 40px;
@@ -200,7 +212,7 @@ h1 {
     margin: 8px 0 0;
     font-size: 16px;
 }
-
+/*diseño de las lineas que unen los pasos*/
 .linea {
     width: 90px;
     height: 2px;
@@ -211,7 +223,6 @@ h1 {
 }
 
 /* PASO ACTUAL */
-
 .paso.activo {
     color: #CBAC59;
 }
@@ -223,12 +234,12 @@ h1 {
 }
 
 /* CONTENIDO DE CADA PASO */
-/*Oculta todos los pasos*/
+/*por defecto todos los contenidos de los pasos están ocultos*/
 .contenido-paso {
     display: none;
 }
 
-/*muestra el que tenga clse activo*/
+/*muestra el que tenga clse activo (js cambia estas clases)*/
 .contenido-paso.activo {
     display: block;
 }
@@ -245,6 +256,7 @@ h1 {
     color: black;
 }
 
+/*estilos de compra-exitosa (js genera dinámicamente los elementos)*/
 .compra-exitosa {
     text-align: center;
     padding: 30px;
@@ -267,6 +279,7 @@ h1 {
     margin-top: 20px;
 }
 
+/*aplico los estilos q comparten ambos botones*/
 .boton-siguiente,
 .boton-anterior {
     min-width: 140px;
@@ -284,7 +297,7 @@ h1 {
 
     cursor: pointer;
 }
-
+/*definimos por separado los colores*/
 .boton-siguiente {
     background-color: #CBAC59;
     color: black;
@@ -294,19 +307,19 @@ h1 {
     background-color: #808080;
     color: white;
 }
-
+/*acomoda los campos de pago*/
 .campo-pago {
     display: flex;
     align-items: center;
 
     margin-bottom: 15px;
 }
-
+/*hace q las etiquetas tengan el mismo ancho y se alineen*/
 .campo-pago label {
     width: 190px;
     font-size: 18px;
 }
-
+/*aspecto de los cuadrados donde escribe el usuario*/
 .campo-pago input {
     width: 400px;
     height: 45px;
@@ -319,6 +332,7 @@ h1 {
     font-family: Georgia, "Times New Roman", serif;
     font-size: 16px;
 }
+/*Da espacio y orden visual al resumen final*/
 .resumen-compra {
     padding: 10px 0;
 }
