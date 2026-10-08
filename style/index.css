@@ -10,25 +10,28 @@ body{
 }
 
 .header {
-    width: 100%;       /* Ocupa todo el ancho de la pantalla */
-    height: 730px;      /* Altura fija del header */
-    padding: cover;   /* Espacio interno a los lados */
+    width: 100%;                /* Ocupa todo el ancho de la pantalla */
+    height: 730px;              /* Altura fija del header */
+    padding: cover;             /* Espacio interno a los lados */
+
     background-image: url(../img/CineMasterBannerInicio.png);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
+
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 205px; /*separacion entre elementos*/
+    gap: 205px;                 /* separacion entre elementos */
+
     color: #ffffff;
     font-size:xx-large;
     font-family:'Times New Roman', Times, serif;
 
-    position: sticky;
+    position: sticky;           /* hace que cuando se scrolee, el header se mantenga fijo*/
     top: 0;
-    z-index: 1;
+    z-index: 1;                 /* como el z-index de main es mayor, main va a tapar al header */
 }
 
 .eslogan {
@@ -42,8 +45,6 @@ body{
 .comprar a:hover {
     color: #ffffff;
 }
-
-
 
 
 main {
@@ -97,17 +98,16 @@ h3 {
     color: #8c7325;
 }
 
-
 .estrenos, .peliculas {
     display: flex;
     gap: 30px;
 }
 
 .portadaPeli {
-    width: 200px;         /* Ancho idéntico para ambas */
-    height: 285px;        /* Alto idéntico para ambas */
+    width: 200px;               /* Ancho idéntico para ambas */
+    height: 285px;              /* Alto idéntico para ambas */
 
-    object-fit: cover;    /* Recorta los bordes para que no se estiren */
+    object-fit: cover;          /* Recorta los bordes para que no se estiren */
     object-position: center;
 
     transition: transform 0.3s ease, box-shadow 0.3s ease;     /* Suaviza la animación tanto al entrar como al salir del cursor */
@@ -115,7 +115,7 @@ h3 {
 }
 
 .portadaPeli:hover {
-    transform: translateY(-20px);  /* Mueve la imagen 10 píxeles hacia arriba en el eje Y */
+    transform: translateY(-20px);  /* Mueve la imagen 20 píxeles hacia arriba en el eje Y */
     /* Añade una sombra difusa abajo para simular la altura */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
 }
@@ -153,7 +153,11 @@ h3 {
 
 a {
     text-decoration: none;
-    color: #ffffff;
+    color: #8c7325;
+}
+
+a:hover {
+    color: #ffffff;         /* Al pasar el cursor sobre el enlace, cambia de color*/
 }
 
 .confirmar {
