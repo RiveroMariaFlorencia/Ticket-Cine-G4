@@ -43,7 +43,7 @@
                         <label for="trailer">Tráiler: </label>
                         <input type="url" id="trailer" name="trailer" placeholder="Ingrese la url del trailer desde YouTube"><br>
                     </div>
-                    <button class="confirmar" onclick="confirmacion()">Agregar</button>
+                    <button class="confirmar" onclick="agregar()">Agregar</button>
                 </details>
             </div>
         </div>
@@ -52,14 +52,14 @@
                 <details>
                     <summary>Eliminar pelicula</summary>
                         <div class="contenido">
-                            <p>Seleccione la película que desea eliminar:</p>
-                            <div id="listaPeliculas">
-                                <label class="opcion_pelicula"><input type="checkbox"> Barbie </label><br>
-                                <label class="opcion_pelicula"><input type="checkbox"> Colony</label><br>
-                                <label class="opcion_pelicula"><input type="checkbox"> Coraline y la puerta secreta</label><br>
-                                <label class="opcion_pelicula"><input type="checkbox"> Oppenheimer</label><br>
-                                <label class="opcion_pelicula"><input type="checkbox"> Resident Evil</label><br>
-                                <label class="opcion_pelicula"><input type="checkbox"> Spider-Man: Brand New Day</label><br>
+                            <p>Seleccione la película que desea eliminar:</p> <br>
+                            <div id="listaPeliculas" class="listaPeliculas">
+                                <label class="opcionPelicula"><input type="checkbox"> Barbie </label>
+                                <label class="opcionPelicula"><input type="checkbox"> Colony</label>
+                                <label class="opcionPelicula"><input type="checkbox"> Coraline y la puerta secreta</label>
+                                <label class="opcionPelicula"><input type="checkbox"> Oppenheimer</label>
+                                <label class="opcionPelicula"><input type="checkbox"> Resident Evil</label>
+                                <label class="opcionPelicula"><input type="checkbox"> Spider-Man: Brand New Day</label>
                             </div>
                             <button class="confirmar" onclick="confirmacion()">Eliminar</button>
                         </div>       

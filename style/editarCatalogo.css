@@ -41,6 +41,12 @@ nav {
     margin-top: 50px;
 }
 
+.listaPeliculas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 /**/
 h2 {
     margin-top: 20px;
