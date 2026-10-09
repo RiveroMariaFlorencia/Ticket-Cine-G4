@@ -1,7 +1,7 @@
 /*diseño de la caja completa del footer*/
 .footer {
     width: 100%;
-    margin-top: 50px;
+    margin-top: auto;
 
     background-color: #111111;
     border-top: 2px solid #CBAC59;

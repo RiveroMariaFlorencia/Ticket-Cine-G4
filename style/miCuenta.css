@@ -1,5 +1,9 @@
 body{
     background-image: url(../img/fondoGlitter.gif);
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .logo {
