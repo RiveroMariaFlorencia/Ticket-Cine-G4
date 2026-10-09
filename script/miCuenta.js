@@ -21,34 +21,49 @@ const validarFormularioIniciarSesion = () => {
 }
 
 
-//VALIDA EL FORM DE REGISTRO
-//Controla mail,DNI y confirmacion de contraseña
+// VALIDA EL FORMULARIO DE REGISTRO
+// Controla mail, DNI y confirmación de contraseña
 const validarFormularioRegistrarse = () => {
 
-    //obtiene los datos ingresados
+    // Obtiene los datos ingresados
     let email = document.getElementById("emailRegistrarse").value;
     let dni = String(document.getElementById("dniRegistrarse").value);
     let password = document.getElementById("passwordRegistrarse").value;
     let passwordC = document.getElementById("passwordRegistrarseConfirmacion").value;
 
-        //verifica q el mail no esté ya registrado
+    // Verifica que el mail no esté ya registrado
     if (email == "flor@email.com" || email == "anto@email.com") {
         alert("Email ya registrado");
         return;
     }
 
-    //valida q el dni tenga 8 nros
+    // Valida que el DNI tenga 8 números
     if (dni.length !== 8) {
         alert("DNI no valido");
         return;
     }
 
-        //verifica q las dos contras no coincidan
+    // Verifica que las dos contraseñas coincidan
     if (password !== passwordC) {
-        alert("Ingrerse de nuevo las passwords");
+        alert("Ingrese de nuevo las passwords");
         return;
     }
 
-    //si todo ok, ir a la compra
-    window.location.href = "./comprarTicket.html"
+    // Recupera película, día y horario que vienen desde horarios.html
+    const parametros = new URLSearchParams(window.location.search);
+
+    // Extracción de los datos de la URL
+    const pelicula = parametros.get('pelicula'); 
+    const dia      = parametros.get('dia');      
+    const horario  = parametros.get('horario');  
+
+    // Si vino desde horarios, conserva esos datos
+    if (pelicula && dia && horario) {
+
+        window.location.href =`./comprarTicket.html?pelicula=${pelicula}&dia=${dia}&horario=${horario}`;
+
+    } else {
+        // Si entró directamente a Crear Cuenta
+        window.location.href = "./comprarTicket.html";
+    }
 }
