@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="./style/footer.css">
 </head>
 <body>
+
+    <!-- Presentación principal de CineMaster:
+    eslogan, nombre y acceso a compra -->
     <header class="header">
         <div class="eslogan">
             <p>TU CINE,<br>TUS PELICULAS</p>
@@ -16,24 +19,38 @@
         <div class="titulo">
             <h1>CINEMASTER</h1>
         </div>
+
+        <!--lleva directamente al proceso de compra de entradas-->
         <div class="comprar">
             <a href="./comprarTicket.html" class="comprarRef">COMPRA TUS ENTRADAS ONLINE</a>
         </div>  
 
+
+         <!--indicador de desplazarse hacia abajo-->
         <div class="indicador-scroll">
             <div class="flecha"></div>
         </div>
     </header>
     <main>
+
+         <!--agrupa opciones de navegación de la pág-->
         <nav>
             <p>CINEMASTER</p>
             <a href="./miCuenta.html">Mi Cuenta</a>
         </nav>
+
+         <!-- hace que el texto de desplace automáticamente-->
         <marquee scrollamount="15">¡ESTAMOS DE ESTRENO! Celebramos la gran apertura con entradas a mitad de precio</marquee>
+        
+
         <div class="inicio">
+
+             <!--cartelera dividida entre estrenos y pelis dispo-->
             <div class="cartelera">
                 <h3><u>ESTRENOS</u></h3>
                 <div class="estrenos"> 
+
+                     <!--c/peli tiene portada y descripción-->
                     <div class="contenedor">   
                         <img src="./img/portadaPeliculas/spiderman.png" alt="spiderman" class="portadaPeli">
                         <div class="descripcion">
@@ -87,6 +104,8 @@
                     </div>
                 </div>
             </div>
+
+             <!--lleva desde cartelera hacia horarios-->
             <div class="horario">
                 <button class="confirmar"><a href="./horarios.html">Consulta los horarios aca</a></button>
             </div>

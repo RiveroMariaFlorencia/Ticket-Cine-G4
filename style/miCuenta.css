@@ -32,6 +32,8 @@ body{
     border-radius: 15px;
     border: 1px solid #CBAC59;
 
+
+    /*aplica los estilos a los h2 q están dentro de .sesion*/
     & h2 {                      /* Anidacion nativa */
         text-align: center;
     } 

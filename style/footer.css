@@ -1,3 +1,4 @@
+/*diseño de la caja completa del footer*/
 .footer {
     width: 100%;
     margin-top: 50px;
@@ -10,6 +11,7 @@
     padding: 30px 40px;
 }
 
+/*organiza el contenido*/
 .footer-contenido {
     max-width: 1100px;
     margin: 0 auto;
@@ -20,7 +22,7 @@
 
     gap: 30px;
 }
-
+/*"cinemaster"*/
 .footer-marca h3 {
     margin: 0 0 8px;
 
@@ -29,7 +31,7 @@
     font-size: 24px;
     font-weight: normal;
 }
-
+/*diseño del eslogan*/
 .footer-marca p {
     margin: 0;
 
@@ -37,11 +39,11 @@
 
     font-size: 15px;
 }
-
+/*alinea la parte derecha*/
 .footer-info {
     text-align: right;
 }
-
+/*estilo de los textos más pequeños*/
 .footer-info p {
     margin: 5px 0;
 

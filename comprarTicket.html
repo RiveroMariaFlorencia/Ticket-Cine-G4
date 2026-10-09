@@ -1,3 +1,8 @@
+
+<!-- En este archivo se define la estructura de la compra de entradas en 5 pasos:
+ 1:selección de pelicula; 2: selección de horario; 3: selección de entradas;
+ 4: selección de pago; 5: confirmación de compra.-->
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -6,31 +11,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Comprar Ticket</title>
+    <!-- Carga el logo de CineMaster en la pestaña -->
     <link rel="icon" href="./img/logo.png">
-    <link rel="stylesheet" href="style/comprarTicket.css">
-    <link rel="stylesheet" href="style/footer.css">
+    <!-- Conexión del HTML con los archivos CSS -->
+    <link rel="stylesheet" href="./style/comprarTicket.css">
+    <link rel="stylesheet" href="./style/footer.css">
 </head>
 
 <body>
 
     <header>
+        <!--Encabezado: link que al hacer click en cineMaster permite
+        regresar a la página inicial -->
         <a href="./index.html">CINEMASTER</a>
-        <p>Bienvenido @usuario!</p>
+        <p>Bienvenido</p>
     </header>
 
     <main>
 
         <h1>COMPRAR TICKET</h1>
 
+    <!--STEPPER-->
         <div class="stepper">
-
+    
+    <!--Clase activo: indica qué paso está seleccionado actualmente,
+    js la agrega y la quita a medida que el usuario avanza -->
     <div class="paso activo">
         <div class="circulo">1</div>
         <p>Película</p>
     </div>
 
+    <!--Clase linea: son las líneas visuales que conectan los pasos del stepper -->
     <div class="linea"></div>
 
+    <!-- Los demás pasos arrancan "inactivos", y el js va cambiando las clases
+     a medida que el usuario avanza -->
     <div class="paso">
         <div class="circulo">2</div>
         <p>Horario</p>
@@ -58,41 +73,51 @@
     </div>
 
 </div>
-
+        <!--Este section agrupa todo el contenido relacionado con la compra -->
         <section class="contenedor-compra">
+            <!--Paso 1: Selección de película -->
             <div class="contenido-paso activo" id="paso1">
 
                 <div class="opcion-compra">
+                    <!--El label describe qué dato tiene que ingresar/seleccionar el usuario -->
                     <label for="pelicula">Película:</label>
-
+                    <!--Es el desplegable para seleccionar la pelicula -->
                     <select id="pelicula">
+                        <!--value es el valor que js utiliza internamente -->
                         <option value="oppenheimer">Oppenheimer</option>
                         <option value="barbie">Barbie</option>
-                        <option value="avatar">Avatar</option>
+                        <option value="coraline">Coraline</option>
                     </select>
                 </div>
 
+                <!-- Cuando el usuario hace clic se ejecuta la función mostrarPaso(2) de js
+                 que oculta el paso axtual y muestra el segundo paso-->
                 <button type="button" class="boton-siguiente" onclick="mostrarPaso(2)">
                     SIGUIENTE
                 </button>
 
                 </div>
 
+<!--Paso 2: selección de Día -->
 <div class="contenido-paso" id="paso2">
 
     <div class="opcion-compra">
         <label for="dia">Día:</label>
 
-        <select id="dia" onchange="actualizarHorarios()">
-            <option value="hoy">Hoy</option>
-            <option value="manana">Mañana</option>
-            <option value="viernes">Viernes</option>
-        </select>
+    <!--Cuando el usuario cambie el dia, js ejecuta actualizarHorarios()
+    que busca los horarios correspondientes a la película y el día seleccionado-->
+    <select id="dia" onchange="actualizarHorarios()">
+        <!--Se agregan Id´s porq js modifica el texto para poner la fecha real-->
+        <option value="hoy" id="diaHoy">Hoy</option>
+        <option value="manana" id="diaManana">Mañana</option>
+        <option value="viernes" id="diaViernes">Viernes</option>
+    </select>
     </div>
 
     <div class="opcion-compra">
         <label for="horario">Horario:</label>
-
+        <!--Este select está vacío porq los horarios dependen de la película y el día
+        js los genera dinámicamente mediante actualizarHorarios()-->
         <select id="horario">
         </select>
     </div>
@@ -107,13 +132,15 @@
 
 </div>
 
+<!--Paso 3: selección de entradas-->
 <div class="contenido-paso" id="paso3">
 
     <h3>ENTRADAS</h3>
 
     <div class="tipo-entrada">
         <label for="general">General:</label>
-
+        <!--onchange = "calcularTotal()": cuando cambia la cantidad
+        js actualiza el precio total-->
         <select id="general" onchange="calcularTotal()">
             <option value="0">0</option>
             <option value="1">1</option>
@@ -148,6 +175,8 @@
 </div>
 
 <p class="total">
+    <!--span: inicialmente muestra $0
+    funciona como un espacio que js actualiza dinámicamente con el total-->
     TOTAL: <span id="totalEntradas">$0</span>
 </p>
             
@@ -155,12 +184,15 @@
     ANTERIOR
 </button>
 
+<!-- Validación antes del pago: antes de avanzar verifico las entradas (llamando a validarEntradas(),
+ si devuelve true se ejecuta mostrarPaso(4)-->
 <button type="button" class="boton-siguiente"
         onclick="if (validarEntradas()) mostrarPaso(4)">
     SIGUIENTE
 </button>
 
 </div>
+<!--Paso 4: inputs para realizar el pago-->
 <div class="contenido-paso" id="paso4">
 
     <h3>DATOS DEL CLIENTE</h3>
@@ -201,6 +233,8 @@
         ANTERIOR
     </button>
 
+    <!--Antes de mostrar el resumen llamamos a validarPago(),
+    si los datos son válidos la función devuelve true y avanzamos al paso5-->
     <button type="button" class="boton-siguiente"
         onclick="if (validarPago()) mostrarPaso(5)">
     REVISAR COMPRA
@@ -208,12 +242,14 @@
 
 </div>
 
+<!--Paso 5: resumen de compra-->
 <div class="contenido-paso" id="paso5">
 
     <h3>RESUMEN DE COMPRA</h3>
 
     <div class="resumen-compra">
-
+        <!--Los span empiezan vacíos porque js toma las selecciones
+        realizadas en los pasos anteriores y completa automáticamente el resumen-->
         <p>Película: <span id="resumenPelicula"></span></p>
 
         <p>Día: <span id="resumenDia"></span></p>
@@ -238,20 +274,17 @@
         ANTERIOR
     </button>
 
+    <!--Este botón ejecuta finalizarCompra() y muestra la confirmación de compra-->
     <button type="button" class="boton-confirmar" onclick="finalizarCompra()">
     CONFIRMAR COMPRA
     </button>
 
 </div>
-
-
-
         </section>
 
     </main>
-
+<!--FOOTER-->
     <footer class="footer">
-
     <div class="footer-contenido">
 
         <div class="footer-marca">
@@ -268,7 +301,7 @@
 
     </footer>
 
-    <script src="comprarTicket.js"></script>  
+    <script src="./script/comprarTicket.js"></script>  
 
     </body>
 
